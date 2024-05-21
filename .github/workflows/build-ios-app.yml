@@ -8,8 +8,6 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: fastlane ios beta
 
       - uses: actions/checkout@v2
       - name: Result
@@ -17,3 +15,6 @@ jobs:
           xcodebuild -workspace ios/App/App.xcworkspace -list
           ls fastlane
           tree .
+
+      - uses: actions/checkout@v2
+      - run: fastlane ios beta
