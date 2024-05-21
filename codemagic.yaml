@@ -10,8 +10,6 @@ workflows:
         script: yarn install
       - name: Cocoapods installation
         script: cd ./ios/App && pod install
-      - name: Update dependencies and copy web assets to native project
-        script: npx cap sync
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
       - name: Build ipa for distribution
