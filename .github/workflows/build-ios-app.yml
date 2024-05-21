@@ -9,6 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
 
+      - uses: actions/checkout@v2
       - name: Build iOS app
         run: xcodebuild -workspace ./ios/App/App.xcworkspace -scheme App -configuration Release -archivePath $PWD/build/App.xcarchive archive
 
