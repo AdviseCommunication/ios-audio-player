@@ -1,7 +1,7 @@
 platform :ios do
   lane :beta do
     build_app(
-      scheme: "ios/App/App.xcodeproj/xcuserdata/lucashw.xcuserdatad/xcschemes/App.xcscheme",
+      scheme: "App.xcscheme",
       workspace: "ios/App/App.xcworkspace",
       include_bitcode: true)
   end
