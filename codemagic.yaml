@@ -9,7 +9,7 @@ workflows:
       - name: Install npm dependencies for Ionic Capacitor project
         script: yarn install
       - name: Cocoapods installation
-        script: cd ios/App && pod install
+        script: cd ./ios/App && pod install
       - name: Update dependencies and copy web assets to native project
         script: npx cap sync
       - name: Set up code signing settings on Xcode project
