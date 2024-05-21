@@ -25,8 +25,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Result
         run: |
-          ls
           xcodebuild -workspace ./ios/App/App.xcworkspace -list
-
-      - uses: actions/checkout@v2
-      - run: fastlane ios beta
+          fastlane ios beta
