@@ -1,8 +1,0 @@
-platform :ios do
-  lane :beta do
-    build_app(
-      scheme: "App",
-      workspace: "ios/App/App.xcworkspace",
-      include_bitcode: true)
-  end
-end

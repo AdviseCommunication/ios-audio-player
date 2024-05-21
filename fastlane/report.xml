@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: recreate_schemes" time="0.032079329">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

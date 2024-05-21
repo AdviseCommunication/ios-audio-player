@@ -1,0 +1,14 @@
+platform :ios do
+  lane :beta do
+    build_app(
+      scheme: "ios/App/App.xcodeproj/xcuserdata/lucashw.xcuserdatad/xcschemes/App.xcscheme",
+      workspace: "ios/App/App.xcworkspace",
+      include_bitcode: true)
+  end
+end
+
+lane :recreate_scheme do
+  recreate_schemes(
+    project: "./ios/App/App.xcodeproj"
+  )
+end
