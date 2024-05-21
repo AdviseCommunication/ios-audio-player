@@ -6,6 +6,8 @@ workflows:
         XCODE_WORKSPACE: "App.xcworkspace"
         XCODE_SCHEME: "App"
     scripts:
+      - name: Set up provisioning profiles settings on Xcode project
+        script: xcode-project use-profiles
       - name: Build ipa for distribution
         script: |
           cd ./ios/App
