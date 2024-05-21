@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AudioPlayer</string>
+    <string name="title_activity_main">AudioPlayer</string>
+    <string name="package_name">com.audioplayer.app</string>
+    <string name="custom_url_scheme">com.audioplayer.app</string>
+    <string name="audio_player_service_description">com.audioplayer.app</string>
+
+</resources>

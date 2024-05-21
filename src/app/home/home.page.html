@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      Audio Player
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Audio Player</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <div class="img_box">
+    <img src="../../assets/advise.png" alt="">
+  </div>
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>{{ currentTrack.title }}</h2>
+    <p>{{ currentTrack.artist }}</p>
+    <ion-range min="0" max="100" [(ngModel)]="currentTimePercent" mode="md" color="warning" (ionChange)="seekTo($event)"></ion-range>
+    <p>Temps restant : {{ formatTime(audio.duration - audio.currentTime) }}</p>
+
+    <ion-button fill="clear" color="light" (click)="skipBackward()">
+      <ion-icon slot="icon-only" name="play-back"></ion-icon>
+    </ion-button>
+
+    <ion-button shape="round" color="light" (click)="playAudio()">
+      <ion-icon slot="icon-only" name="play"></ion-icon>
+    </ion-button>
+
+    <ion-button shape="round" color="light" (click)="pauseAudio()">
+      <ion-icon slot="icon-only" name="pause"></ion-icon>
+    </ion-button>
+
+    <ion-button fill="clear" color="light" (click)="skipForward()">
+      <ion-icon slot="icon-only" name="play-forward"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>
