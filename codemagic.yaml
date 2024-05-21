@@ -6,14 +6,6 @@ workflows:
         XCODE_WORKSPACE: "./ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
     scripts:
-      - name: Install npm dependencies for Ionic Capacitor project
-        script: npm install
-      - name: Cocoapods installation
-        script: cd ios/App && pod install
-      - name: Update dependencies and copy web assets to native project
-        script: npx cap sync
-      - name: Set up code signing settings on Xcode project
-        script: xcode-project use-profiles
       - name: Build ipa for distribution
         script: |
           cd ios/App
