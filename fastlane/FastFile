@@ -1,0 +1,5 @@
+lane :release do
+  build_app(scheme: "MyApp",
+            workspace: "Example.xcworkspace",
+            include_bitcode: true)
+end
