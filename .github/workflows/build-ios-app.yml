@@ -9,19 +9,18 @@ jobs:
     runs-on: macos-latest
     steps:
 
-      - uses: actions/checkout@v2
-      - name: Build iOS app
-        run: xcodebuild -workspace ./ios/App/App.xcworkspace -scheme App -configuration Release -archivePath $PWD/build/App.xcarchive archive
+      # - uses: actions/checkout@v2
+      # - name: Build iOS app
+      #   run: xcodebuild -workspace ./ios/App/App.xcworkspace -scheme App -configuration Release -archivePath $PWD/build/App.xcarchive archive
 
-      - name: Export IPA
-        run: xcodebuild -exportArchive -archivePath $PWD/build/App.xcarchive -exportOptionsPlist ios/App/ExportOptions.plist -exportPath $PWD/build
+      # - name: Export IPA
+      #   run: xcodebuild -exportArchive -archivePath $PWD/build/App.xcarchive -exportOptionsPlist ios/App/ExportOptions.plist -exportPath $PWD/build
 
-      - name: Upload IPA to GitHub Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-            name: app
-            path: build/*.ipa
-
+      # - name: Upload IPA to GitHub Artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #       name: app
+      #       path: build/*.ipa
 
       - uses: actions/checkout@v2
       - name: Result
