@@ -1,5 +1,5 @@
 lane :beta do
-  build_app(scheme: "MyApp",
-            workspace: "Example.xcworkspace",
+  build_app(scheme: "App",
+            workspace: "App.xcworkspace",
             include_bitcode: true)
 end
