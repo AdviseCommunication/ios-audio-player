@@ -3,7 +3,7 @@ workflows:
     name: Android Workflow
     environment:
       vars:
-        XCODE_WORKSPACE: "./ios/App/App.xcworkspace"
+        XCODE_WORKSPACE: "App.xcworkspace"
         XCODE_SCHEME: "App"
     scripts:
       - name: Install npm dependencies for Ionic Capacitor project
