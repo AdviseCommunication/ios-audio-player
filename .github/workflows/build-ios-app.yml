@@ -10,7 +10,7 @@ jobs:
     steps:
 
       - name: Build iOS app
-        run: xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Release -archivePath $PWD/build/App.xcarchive archive
+        run: xcodebuild -workspace ./ios/App/App.xcworkspace -scheme App -configuration Release -archivePath $PWD/build/App.xcarchive archive
 
       - name: Export IPA
         run: xcodebuild -exportArchive -archivePath $PWD/build/App.xcarchive -exportOptionsPlist ios/App/ExportOptions.plist -exportPath $PWD/build
